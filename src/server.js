@@ -7,7 +7,9 @@ require('dotenv').config()
 
 const app = express()
 const port = process.env.PORT || 8080;
-console.log('>>> Check port: ', port)
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // setup view engine
 configViewEngine(app);
