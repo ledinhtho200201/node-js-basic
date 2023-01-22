@@ -16,7 +16,6 @@ let getDetailPage = async (req, res) => {
 }
 
 let createNewUser = async (req, res) => {
-    console.log('check req', req.body)
     let { firstName, lastName, email, address } = req.body;
     // let firstName = req.body.firstName;
     await pool.execute('INSERT INTO users (firstName, lastName, email, address) VALUES (?, ?, ?, ?)',
