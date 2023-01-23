@@ -54,3 +54,15 @@ body {
   margin-top: 15px;
   cursor: pointer;
 }
+
+.upload-file-container {
+  padding: 15px;
+}
+
+.upload-file-container label {
+  display: block;
+}
+
+hr {
+  border-top: 3px solid #eee !important;
+}

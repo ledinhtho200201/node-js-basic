@@ -11,10 +11,9 @@
 
 <body>
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a class="active" href="/">Home</a>
+        <a href="/upload">Upload file</a>
+
     </div>
 
     <div>
@@ -42,8 +41,11 @@
                             <td>
                                 <%= dataUser[i].lastName %>
                             </td>
-                            <td>
-                                <a href="/detail/user/<%= dataUser[i].id %>" target="_blank">Detail</a>
+                            <td style="display: flex; gap: 15px">
+                                <form action="">
+                                    <a class="btn-detail" href="/detail/user/<%= dataUser[i].id %>"
+                                        target="_blank">Detail</a>
+                                </form>
                                 <form action="/edit-user/<%= dataUser[i].id %>" method="GET">
                                     <button type="submit">Edit</button>
                                 </form>
